@@ -21,6 +21,10 @@
 		C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6AC2AD6C7DC00610220 /* DecodableParser.swift */; };
 		C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6AE2AD6C7E400610220 /* BaseParser.swift */; };
 		C611B6B12AD6CC8300610220 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6B02AD6CC8300610220 /* BaseService.swift */; };
+		C611B6B42AD6D48700610220 /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6B32AD6D48700610220 /* LeagueService.swift */; };
+		C611B6B72AD6D4E400610220 /* NetworkLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6B62AD6D4E400610220 /* NetworkLeague.swift */; };
+		C611B6BB2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */; };
+		C611B6BD2AD6D66B00610220 /* NetworkLeagueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		C611B6AC2AD6C7DC00610220 /* DecodableParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableParser.swift; sourceTree = "<group>"; };
 		C611B6AE2AD6C7E400610220 /* BaseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParser.swift; sourceTree = "<group>"; };
 		C611B6B02AD6CC8300610220 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		C611B6B32AD6D48700610220 /* LeagueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueService.swift; sourceTree = "<group>"; };
+		C611B6B62AD6D4E400610220 /* NetworkLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLeague.swift; sourceTree = "<group>"; };
+		C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
+		C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLeagueResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +170,7 @@
 		C611B68A2AD6A63300610220 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C611B6B82AD6D5BF00610220 /* Common */,
 				C611B69C2AD6C6F900610220 /* Network */,
 				C611B68B2AD6A64700610220 /* Data */,
 				C611B68C2AD6A64D00610220 /* Service */,
@@ -179,6 +188,7 @@
 		C611B68C2AD6A64D00610220 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C611B6B22AD6D46A00610220 /* League */,
 				C611B68E2AD6A81B00610220 /* Base */,
 			);
 			path = Service;
@@ -202,6 +212,7 @@
 		C611B69C2AD6C6F900610220 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C611B6B52AD6D4D600610220 /* Model */,
 				C611B6AA2AD6C7BD00610220 /* Parser */,
 				C611B69D2AD6C6FD00610220 /* Util */,
 			);
@@ -248,6 +259,39 @@
 				C611B6AE2AD6C7E400610220 /* BaseParser.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		C611B6B22AD6D46A00610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B32AD6D48700610220 /* LeagueService.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6B52AD6D4D600610220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B62AD6D4E400610220 /* NetworkLeague.swift */,
+				C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C611B6B82AD6D5BF00610220 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B92AD6D5C300610220 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C611B6B92AD6D5C300610220 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +434,11 @@
 			files = (
 				C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */,
 				C611B6612AD6A33E00610220 /* ContentView.swift in Sources */,
+				C611B6B42AD6D48700610220 /* LeagueService.swift in Sources */,
+				C611B6BB2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift in Sources */,
+				C611B6B72AD6D4E400610220 /* NetworkLeague.swift in Sources */,
 				C611B6A12AD6C71E00610220 /* FResponse.swift in Sources */,
+				C611B6BD2AD6D66B00610220 /* NetworkLeagueResponse.swift in Sources */,
 				C611B6A32AD6C72700610220 /* FResponseExtensions.swift in Sources */,
 				C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */,
 				C611B65F2AD6A33E00610220 /* FDJApp.swift in Sources */,

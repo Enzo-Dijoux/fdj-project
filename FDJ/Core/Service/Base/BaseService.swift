@@ -13,7 +13,7 @@ private let API_BASE_URL = "https://www.thesportsdb.com/api/v1/json/50130162/"
 //TODO: Check if headers implementation is needed
 class BaseService {
     
-    func get<T>(path: String, parameters: Parameters?, headers: HTTPHeaders = HTTPHeaders(), parser: BaseParser? = nil) async -> FResponse<T>? {
+    func getRequest<T>(path: String, parameters: Parameters? = nil, headers: HTTPHeaders = HTTPHeaders(), parser: BaseParser? = nil) async -> FResponse<T>? {
         return await startRequest(method: .get, path: path, parameters: parameters, headers: headers, parser: parser)
     }
 
