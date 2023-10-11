@@ -54,7 +54,10 @@ private struct SuccessView: View {
         NavigationStack {
             switch teamState {
             case .initial:
-                LeagueList(leagues: leagues, searchText: searchText, onLeaguePressed: onLeaguePressed)
+                LeagueList(leagues: leagues, searchText: searchText, onLeaguePressed: { league in
+                    self.searchText = league
+                    onLeaguePressed(league)
+                })
             case .loading:
                 LoadingView()
             case .success(let teams):
