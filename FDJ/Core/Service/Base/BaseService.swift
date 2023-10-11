@@ -10,15 +10,14 @@ import Alamofire
 
 private let API_BASE_URL = "https://www.thesportsdb.com/api/v1/json/50130162/"
 
-//TODO: Check if headers implementation is needed
 class BaseService {
     
-    func getRequest<T>(path: String, parameters: Parameters? = nil, headers: HTTPHeaders = HTTPHeaders(), parser: BaseParser? = nil) async -> FResponse<T>? {
-        return await startRequest(method: .get, path: path, parameters: parameters, headers: headers, parser: parser)
+    func getRequest<T>(path: String, parameters: Parameters? = nil, parser: BaseParser? = nil) async -> FResponse<T>? {
+        return await startRequest(method: .get, path: path, parameters: parameters, parser: parser)
     }
 
-    private func startRequest<T>(method: HTTPMethod, path: String, parameters: Parameters?, headers: HTTPHeaders, parser: BaseParser? = nil) async -> FResponse<T>? {
-        let request = createRequest(method: method, url: API_BASE_URL + path, parameters: parameters, headers: headers)
+    private func startRequest<T>(method: HTTPMethod, path: String, parameters: Parameters?, parser: BaseParser? = nil) async -> FResponse<T>? {
+        let request = createRequest(method: method, url: API_BASE_URL + path, parameters: parameters)
         
         return await withCheckedContinuation { continuation in
             request.responseData { response in
@@ -27,8 +26,8 @@ class BaseService {
         }
     }
     
-    private func createRequest(method: HTTPMethod, url: String, parameters: Parameters?, headers: HTTPHeaders) -> DataRequest {
-        return AF.request(url, method: method, parameters: parameters, headers: headers)
+    private func createRequest(method: HTTPMethod, url: String, parameters: Parameters?) -> DataRequest {
+        return AF.request(url, method: method, parameters: parameters)
     }
     
     private func handleResponse<T>(_ response: AFDataResponse<Data>, request: DataRequest, parser: BaseParser? = nil) -> FResponse<T>? {
@@ -47,7 +46,6 @@ class BaseService {
             print(String(data: data, encoding: .utf8))
             return response.response?.toFResponse(body: result)
         } else {
-            //TODO: Remove this if not needed
             return response.response?.toFResponse(body: () as? T)
         }
     }
@@ -67,11 +65,4 @@ class BaseService {
         
         return httpResponse.toFResponse(error: error)
     }
-    
-    //TODO: Remove this
-//    private func generateDefaultHeaders() -> HTTPHeaders {
-//        var headers: HTTPHeaders = [:]
-//        headers.add(.contentType("application/json"))
-//        return headers
-//    }
 }
