@@ -94,9 +94,10 @@
 		C611B65D2AD6A33E00610220 /* FDJ */ = {
 			isa = PBXGroup;
 			children = (
-				C611B65E2AD6A33E00610220 /* FDJApp.swift */,
+				C611B6882AD6A5F700610220 /* Application */,
 				C611B6602AD6A33E00610220 /* ContentView.swift */,
-				C611B6622AD6A33F00610220 /* Assets.xcassets */,
+				C611B68A2AD6A63300610220 /* Core */,
+				C611B68D2AD6A66C00610220 /* Feature */,
 				C611B6642AD6A33F00610220 /* Preview Content */,
 			);
 			path = FDJ;
@@ -125,6 +126,53 @@
 				C611B67B2AD6A33F00610220 /* FDJUITestsLaunchTests.swift */,
 			);
 			path = FDJUITests;
+			sourceTree = "<group>";
+		};
+		C611B6882AD6A5F700610220 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6622AD6A33F00610220 /* Assets.xcassets */,
+				C611B6892AD6A60100610220 /* UI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C611B6892AD6A60100610220 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C611B65E2AD6A33E00610220 /* FDJApp.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C611B68A2AD6A63300610220 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C611B68B2AD6A64700610220 /* Data */,
+				C611B68C2AD6A64D00610220 /* Service */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C611B68B2AD6A64700610220 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C611B68C2AD6A64D00610220 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C611B68D2AD6A66C00610220 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
