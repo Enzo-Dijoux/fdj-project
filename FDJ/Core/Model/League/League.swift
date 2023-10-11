@@ -20,3 +20,10 @@ class League {
         self.alternate = alternate
     }
 }
+
+let previewLeague = [
+    League(id: "id1", name: "French Ligue 1", sport: "", alternate: ""),
+    League(id: "id2", name: "French Ligue 2", sport: "", alternate: ""),
+    League(id: "id3", name: "Scottish Premier League", sport: "", alternate: ""),
+    League(id: "id4", name: "German Bundesliga", sport: "", alternate: ""),
+]

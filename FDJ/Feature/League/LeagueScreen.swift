@@ -42,25 +42,6 @@ private struct LeagueScreen: View {
     }
 }
 
-private struct LoadingView: View {
-    var body: some View {
-        ProgressView()
-    }
-}
-
-private struct ErrorView: View {
-    let message: String
-    
-    var body: some View {
-        Text(message)
-            .font(.title)
-            .padding()
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-            .background(Color.red)
-    }
-}
-
 private struct SuccessView: View {
     let teamState: TeamUiState
     let leagues: [League]
@@ -128,7 +109,7 @@ private struct SuccessView: View {
         var body: some View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(teams, id: \.id) { team in
+                    ForEach(filteredTeams(teams), id: \.id) { team in
                         FImage(url: URL(string: team.logo))
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100, maxHeight: 100)
                     }
@@ -136,25 +117,74 @@ private struct SuccessView: View {
                 .padding()
             }
         }
+        
+        private func filteredTeams(_ teams: [Team]) -> [Team] {
+            //Filter teams by name in anti-alphabetical order.
+            let teamsSortedByName = teams.sorted { first, second in
+                first.name > second.name
+            }
+            //Filter teams to display only pair elements
+            let teamFiltered = teamsSortedByName.enumerated().filter({ element in
+                element.offset % 2 == 0
+            }).map({ element in
+                element.element
+            })
+            return teamFiltered
+        }
     }
 }
 
-//TODO: Setup all previews
-//struct LeagueScreenSuccess_Previews: PreviewProvider {
-//    static var previews: some View {
-//        //TODO: Add mock leagues
-//        LeagueScreen(state: .success(leagues: []), onSearch: {_ in})
-//    }
-//}
-//
-//struct LeagueScreenLoading_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LeagueScreen(state: .loading, onSearch: {_ in})
-//    }
-//}
-//
-//struct LeagueScreenError_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LeagueScreen(state: .error(message: "Error"), onSearch: {_ in})
-//    }
-//}
+private struct LoadingView: View {
+    var body: some View {
+        ProgressView()
+    }
+}
+
+private struct ErrorView: View {
+    let message: String
+    
+    var body: some View {
+        Text(message)
+            .font(.title)
+            .padding()
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .background(Color.red)
+    }
+}
+
+struct LeagueScreenSuccess_Previews: PreviewProvider {
+    static var previews: some View {
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+    }
+}
+
+struct LeagueScreenSuccessTeamSuccess_Previews: PreviewProvider {
+    static var previews: some View {
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .success(teams: previewTeam), onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+    }
+}
+
+struct LeagueScreenSuccessTeamError_Previews: PreviewProvider {
+    static var previews: some View {
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .error(message: "Error occured on team fetched"), onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+    }
+}
+
+struct LeagueScreenSuccessTeamLoading_Previews: PreviewProvider {
+    static var previews: some View {
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .loading, onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+    }
+}
+
+struct LeagueScreenLoading_Previews: PreviewProvider {
+    static var previews: some View {
+        LeagueScreen(leagueState: .loading, teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+    }
+}
+
+struct LeagueScreenError_Previews: PreviewProvider {
+    static var previews: some View {
+        LeagueScreen(leagueState: .error(message: "Error occured"), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+    }
+}

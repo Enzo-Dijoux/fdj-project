@@ -9,10 +9,19 @@ import Foundation
 
 class Team {
     let id: String
+    let name: String
     let logo: String
     
-    init(id: String = "", logo: String = "") {
+    init(id: String = "", name: String, logo: String = "") {
         self.id = id
+        self.name = name
         self.logo = logo
     }
 }
+
+let previewTeam = [
+    Team(id: "id1", name: "Paris SG", logo: "https://www.thesportsdb.com/images/media/team/badge/undmwf1679830546.png"),
+    Team(id: "id2", name: "Arsenal", logo: "https://www.thesportsdb.com/images/media/team/badge/uyhbfe1612467038.png"),
+    Team(id: "id3", name: "Aston Villa", logo: "https://www.thesportsdb.com/images/media/team/badge/gev5lp1679951447.png"),
+    Team(id: "id4", name: "Bournemouth", logo: "https://www.thesportsdb.com/images/media/team/badge/y08nak1534071116.png"),
+]
