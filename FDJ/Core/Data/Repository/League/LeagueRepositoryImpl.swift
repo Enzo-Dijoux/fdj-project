@@ -29,5 +29,6 @@ class LeagueRepositoryImpl: LeagueRepository {
             }) ?? .loading(ResourceLoading())
             subject.send(resource)
         }
+        return subject.eraseToAnyPublisher()
     }
 }

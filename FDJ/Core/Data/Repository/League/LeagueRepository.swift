@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LeagueRepository {
-    func retrieve() async -> FResource<[League]>
+    func retrieve() -> RepositoryPublisher<[League]>
 }

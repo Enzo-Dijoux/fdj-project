@@ -9,31 +9,31 @@ import Foundation
 
 extension LeagueService.NetworkLeagueReponse {
     class NetworkLeague: Decodable {
-        let id: String
-        let name: String
-        let sport: String
-        let alternate: String
+        let idLeague: String
+        let strLeague: String
+        let strSport: String
+        let strLeagueAlternate: String
         
         enum CodingKeys: String, CodingKey {
             
-            case id = "idLeague"
-            case name = "strLeague"
-            case sport = "strSport"
-            case alternate = "strLeagueAlternate"
+            case idLeague = "idLeague"
+            case strLeague = "strLeague"
+            case strSport = "strSport"
+            case strLeagueAlternate = "strLeagueAlternate"
         }
         
         required init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
-            id = values.decodeIfPresentSafe(String.self, forKey: .id, defaultValue: "")
-            name = values.decodeIfPresentSafe(String.self, forKey: .name, defaultValue: "")
-            sport = values.decodeIfPresentSafe(String.self, forKey: .sport, defaultValue: "")
-            alternate = values.decodeIfPresentSafe(String.self, forKey: .alternate, defaultValue: "")
+            idLeague = values.decodeIfPresentSafe(String.self, forKey: .idLeague, defaultValue: "")
+            strLeague = values.decodeIfPresentSafe(String.self, forKey: .strLeague, defaultValue: "")
+            strSport = values.decodeIfPresentSafe(String.self, forKey: .strSport, defaultValue: "")
+            strLeagueAlternate = values.decodeIfPresentSafe(String.self, forKey: .strLeagueAlternate, defaultValue: "")
         }
     }
 }
 
 extension LeagueService.NetworkLeagueReponse.NetworkLeague {
     func asExternalModel() -> League {
-        League(id: id, name: name, sport: sport, alternate: alternate)
+        League(id: idLeague, name: strLeague, sport: strSport, alternate: strLeagueAlternate)
     }
 }

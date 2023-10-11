@@ -9,18 +9,24 @@ import Foundation
 
 extension TeamService.NetworkTeamReponse {
     class NetworkTeam: Decodable {
-        let id: String
-        let logo: String
+        let idTeam: String
+        let strTeamLogo: String
         
         enum CodingKeys: String, CodingKey {
-            case id = "idTeam"
-            case logo = "strTeamLogo"
+            case idTeam = "idTeam"
+            case strTeamLogo = "strTeamLogo"
         }
         
         required init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
-            id = values.decodeIfPresentSafe(String.self, forKey: .id, defaultValue: "")
-            logo = values.decodeIfPresentSafe(String.self, forKey: .logo, defaultValue: "")
+            idTeam = values.decodeIfPresentSafe(String.self, forKey: .idTeam, defaultValue: "")
+            strTeamLogo = values.decodeIfPresentSafe(String.self, forKey: .strTeamLogo, defaultValue: "")
         }
+    }
+}
+
+extension TeamService.NetworkTeamReponse.NetworkTeam {
+    func asExtenalModel() -> Team {
+        Team(id: idTeam, logo: strTeamLogo)
     }
 }

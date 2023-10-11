@@ -6,5 +6,6 @@
 //
 
 import Foundation
+import Combine
 
 typealias RepositoryPublisher<T> = AnyPublisher<FResource<T>, Never>

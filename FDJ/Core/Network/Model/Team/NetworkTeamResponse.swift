@@ -22,3 +22,11 @@ extension TeamService {
         }
     }
 }
+
+extension TeamService.NetworkTeamReponse {
+    func asExternalModel() -> TeamResponse {
+        TeamResponse(teams: teams.map({ network in
+            network.asExtenalModel()
+        }))
+    }
+}
