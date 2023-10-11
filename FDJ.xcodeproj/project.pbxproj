@@ -14,6 +14,13 @@
 		C611B6702AD6A33F00610220 /* FDJTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B66F2AD6A33F00610220 /* FDJTests.swift */; };
 		C611B67A2AD6A33F00610220 /* FDJUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6792AD6A33F00610220 /* FDJUITests.swift */; };
 		C611B67C2AD6A33F00610220 /* FDJUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B67B2AD6A33F00610220 /* FDJUITestsLaunchTests.swift */; };
+		C611B6932AD6A84100610220 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C611B6922AD6A84100610220 /* Alamofire */; };
+		C611B6962AD6A85100610220 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C611B6952AD6A85100610220 /* Factory */; };
+		C611B6A12AD6C71E00610220 /* FResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6A02AD6C71E00610220 /* FResponse.swift */; };
+		C611B6A32AD6C72700610220 /* FResponseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6A22AD6C72700610220 /* FResponseExtensions.swift */; };
+		C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6AC2AD6C7DC00610220 /* DecodableParser.swift */; };
+		C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6AE2AD6C7E400610220 /* BaseParser.swift */; };
+		C611B6B12AD6CC8300610220 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6B02AD6CC8300610220 /* BaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,11 @@
 		C611B6752AD6A33F00610220 /* FDJUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDJUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C611B6792AD6A33F00610220 /* FDJUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJUITests.swift; sourceTree = "<group>"; };
 		C611B67B2AD6A33F00610220 /* FDJUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C611B6A02AD6C71E00610220 /* FResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResponse.swift; sourceTree = "<group>"; };
+		C611B6A22AD6C72700610220 /* FResponseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResponseExtensions.swift; sourceTree = "<group>"; };
+		C611B6AC2AD6C7DC00610220 /* DecodableParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableParser.swift; sourceTree = "<group>"; };
+		C611B6AE2AD6C7E400610220 /* BaseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParser.swift; sourceTree = "<group>"; };
+		C611B6B02AD6CC8300610220 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C611B6932AD6A84100610220 /* Alamofire in Frameworks */,
+				C611B6962AD6A85100610220 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +162,7 @@
 		C611B68A2AD6A63300610220 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C611B69C2AD6C6F900610220 /* Network */,
 				C611B68B2AD6A64700610220 /* Data */,
 				C611B68C2AD6A64D00610220 /* Service */,
 			);
@@ -164,6 +179,7 @@
 		C611B68C2AD6A64D00610220 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C611B68E2AD6A81B00610220 /* Base */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -173,6 +189,65 @@
 			children = (
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		C611B68E2AD6A81B00610220 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B02AD6CC8300610220 /* BaseService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C611B69C2AD6C6F900610220 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6AA2AD6C7BD00610220 /* Parser */,
+				C611B69D2AD6C6FD00610220 /* Util */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C611B69D2AD6C6FD00610220 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C611B69E2AD6C71000610220 /* Model */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C611B69E2AD6C71000610220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C611B69F2AD6C71400610220 /* FResponse */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C611B69F2AD6C71400610220 /* FResponse */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6A02AD6C71E00610220 /* FResponse.swift */,
+				C611B6A22AD6C72700610220 /* FResponseExtensions.swift */,
+			);
+			path = FResponse;
+			sourceTree = "<group>";
+		};
+		C611B6AA2AD6C7BD00610220 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6AB2AD6C7D000610220 /* Base */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		C611B6AB2AD6C7D000610220 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6AC2AD6C7DC00610220 /* DecodableParser.swift */,
+				C611B6AE2AD6C7E400610220 /* BaseParser.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +266,10 @@
 			dependencies = (
 			);
 			name = FDJ;
+			packageProductDependencies = (
+				C611B6922AD6A84100610220 /* Alamofire */,
+				C611B6952AD6A85100610220 /* Factory */,
+			);
 			productName = FDJ;
 			productReference = C611B65B2AD6A33E00610220 /* FDJ.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +342,10 @@
 				Base,
 			);
 			mainGroup = C611B6522AD6A33E00610220;
+			packageReferences = (
+				C611B6912AD6A84100610220 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C611B6942AD6A85100610220 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			productRefGroup = C611B65C2AD6A33E00610220 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -305,8 +388,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */,
 				C611B6612AD6A33E00610220 /* ContentView.swift in Sources */,
+				C611B6A12AD6C71E00610220 /* FResponse.swift in Sources */,
+				C611B6A32AD6C72700610220 /* FResponseExtensions.swift in Sources */,
+				C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */,
 				C611B65F2AD6A33E00610220 /* FDJApp.swift in Sources */,
+				C611B6B12AD6CC8300610220 /* BaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +713,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C611B6912AD6A84100610220 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C611B6942AD6A85100610220 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C611B6922AD6A84100610220 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C611B6912AD6A84100610220 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C611B6952AD6A85100610220 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C611B6942AD6A85100610220 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C611B6532AD6A33E00610220 /* Project object */;
 }
