@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C611B65F2AD6A33E00610220 /* FDJApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B65E2AD6A33E00610220 /* FDJApp.swift */; };
-		C611B6612AD6A33E00610220 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6602AD6A33E00610220 /* ContentView.swift */; };
+		C611B6612AD6A33E00610220 /* LeagueScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6602AD6A33E00610220 /* LeagueScreen.swift */; };
 		C611B6632AD6A33F00610220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C611B6622AD6A33F00610220 /* Assets.xcassets */; };
 		C611B6662AD6A33F00610220 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C611B6652AD6A33F00610220 /* Preview Assets.xcassets */; };
 		C611B6702AD6A33F00610220 /* FDJTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B66F2AD6A33F00610220 /* FDJTests.swift */; };
@@ -43,6 +43,10 @@
 		C611B6EB2AD6E3F400610220 /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6EA2AD6E3F400610220 /* TeamResponse.swift */; };
 		C611B6EE2AD6E52C00610220 /* TeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6ED2AD6E52C00610220 /* TeamRepository.swift */; };
 		C611B6F02AD6E53600610220 /* TeamRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6EF2AD6E53600610220 /* TeamRepositoryImpl.swift */; };
+		C611B6F32AD6E6EC00610220 /* LeagueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6F22AD6E6EC00610220 /* LeagueViewModel.swift */; };
+		C611B6F62AD6E83300610220 /* FResourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6F52AD6E83300610220 /* FResourceExtensions.swift */; };
+		C611B6F82AD6EA1600610220 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6F72AD6EA1600610220 /* StringExtensions.swift */; };
+		C611B6FB2AD6EACF00610220 /* ViewModelModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +69,7 @@
 /* Begin PBXFileReference section */
 		C611B65B2AD6A33E00610220 /* FDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C611B65E2AD6A33E00610220 /* FDJApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJApp.swift; sourceTree = "<group>"; };
-		C611B6602AD6A33E00610220 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C611B6602AD6A33E00610220 /* LeagueScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueScreen.swift; sourceTree = "<group>"; };
 		C611B6622AD6A33F00610220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C611B6652AD6A33F00610220 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C611B66B2AD6A33F00610220 /* FDJTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDJTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +104,10 @@
 		C611B6EA2AD6E3F400610220 /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
 		C611B6ED2AD6E52C00610220 /* TeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRepository.swift; sourceTree = "<group>"; };
 		C611B6EF2AD6E53600610220 /* TeamRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRepositoryImpl.swift; sourceTree = "<group>"; };
+		C611B6F22AD6E6EC00610220 /* LeagueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewModel.swift; sourceTree = "<group>"; };
+		C611B6F52AD6E83300610220 /* FResourceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResourceExtensions.swift; sourceTree = "<group>"; };
+		C611B6F72AD6EA1600610220 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				C611B6882AD6A5F700610220 /* Application */,
-				C611B6602AD6A33E00610220 /* ContentView.swift */,
 				C611B68A2AD6A63300610220 /* Core */,
 				C611B68D2AD6A66C00610220 /* Feature */,
 				C611B6642AD6A33F00610220 /* Preview Content */,
@@ -237,6 +244,8 @@
 		C611B68D2AD6A66C00610220 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				C611B6F92AD6EAB500610220 /* DI */,
+				C611B6F12AD6E69A00610220 /* League */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */,
+				C611B6F72AD6EA1600610220 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,6 +419,7 @@
 		C611B6D52AD6DD6400610220 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C611B6F42AD6E82300610220 /* Extensions */,
 				C611B6D62AD6DD6D00610220 /* FResource.swift */,
 				C611B6DA2AD6DD9F00610220 /* ResourceEmpty.swift */,
 				C611B6D82AD6DD9500610220 /* ResourceLoading.swift */,
@@ -450,6 +461,31 @@
 				C611B6EF2AD6E53600610220 /* TeamRepositoryImpl.swift */,
 			);
 			path = Team;
+			sourceTree = "<group>";
+		};
+		C611B6F12AD6E69A00610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6602AD6A33E00610220 /* LeagueScreen.swift */,
+				C611B6F22AD6E6EC00610220 /* LeagueViewModel.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6F42AD6E82300610220 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6F52AD6E83300610220 /* FResourceExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C611B6F92AD6EAB500610220 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,8 +630,10 @@
 				C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */,
 				C611B6E92AD6E3EE00610220 /* Team.swift in Sources */,
 				C611B6CD2AD6DB8F00610220 /* LeagueResponse.swift in Sources */,
+				C611B6FB2AD6EACF00610220 /* ViewModelModule.swift in Sources */,
 				C611B6C42AD6D86B00610220 /* NetworkTeamResponse.swift in Sources */,
-				C611B6612AD6A33E00610220 /* ContentView.swift in Sources */,
+				C611B6F32AD6E6EC00610220 /* LeagueViewModel.swift in Sources */,
+				C611B6612AD6A33E00610220 /* LeagueScreen.swift in Sources */,
 				C611B6B42AD6D48700610220 /* LeagueService.swift in Sources */,
 				C611B6D72AD6DD6D00610220 /* FResource.swift in Sources */,
 				C611B6DB2AD6DD9F00610220 /* ResourceEmpty.swift in Sources */,
@@ -603,6 +641,7 @@
 				C611B6BB2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift in Sources */,
 				C611B6EB2AD6E3F400610220 /* TeamResponse.swift in Sources */,
 				C611B6D12AD6DCB400610220 /* LeagueRepository.swift in Sources */,
+				C611B6F62AD6E83300610220 /* FResourceExtensions.swift in Sources */,
 				C611B6C02AD6D81200610220 /* TeamService.swift in Sources */,
 				C611B6B72AD6D4E400610220 /* NetworkLeague.swift in Sources */,
 				C611B6C62AD6D87200610220 /* NetworkTeam.swift in Sources */,
@@ -612,6 +651,7 @@
 				C611B6DD2AD6DDB400610220 /* ResourceError.swift in Sources */,
 				C611B6BD2AD6D66B00610220 /* NetworkLeagueResponse.swift in Sources */,
 				C611B6D92AD6DD9500610220 /* ResourceLoading.swift in Sources */,
+				C611B6F82AD6EA1600610220 /* StringExtensions.swift in Sources */,
 				C611B6A32AD6C72700610220 /* FResponseExtensions.swift in Sources */,
 				C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */,
 				C611B65F2AD6A33E00610220 /* FDJApp.swift in Sources */,

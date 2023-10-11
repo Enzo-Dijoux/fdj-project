@@ -15,6 +15,6 @@ class TeamService: BaseService {
         let parameters: [String: Any] = [
             "l": league,
         ]
-        return await getRequest(path: path, parameters: parameters)
+        return await getRequest(path: path, parameters: parameters, parser: parser)
     }
 }

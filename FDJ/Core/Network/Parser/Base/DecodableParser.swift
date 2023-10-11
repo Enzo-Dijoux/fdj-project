@@ -7,9 +7,9 @@
 
 import Foundation
 
-class DecodableParser<T: Decodable> {
+class DecodableParser<T: Decodable>: BaseParser {
 
-    func parse(withResponse data: NSData, headers: [AnyHashable : Any]) -> Any? {
+    override func parse(withResponse data: NSData, headers: [AnyHashable : Any]) -> Any? {
         do {
             return try JSONDecoder().decode(T.self, from: data as Data)
         } catch {

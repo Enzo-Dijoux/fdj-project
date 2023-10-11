@@ -12,6 +12,6 @@ class LeagueService: BaseService {
     func get() async -> FResponse<NetworkLeagueReponse>? {
         let parser = DecodableParser<NetworkLeagueReponse>()
         let path = "all_leagues.php"
-        return await getRequest(path: path)
+        return await getRequest(path: path, parser: parser)
     }
 }

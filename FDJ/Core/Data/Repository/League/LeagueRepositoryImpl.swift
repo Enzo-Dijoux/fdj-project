@@ -27,7 +27,9 @@ class LeagueRepositoryImpl: LeagueRepository {
                 })
                 return resource
             }) ?? .loading(ResourceLoading())
-            subject.send(resource)
+            await MainActor.run {
+                subject.send(resource)
+            }
         }
         return subject.eraseToAnyPublisher()
     }
