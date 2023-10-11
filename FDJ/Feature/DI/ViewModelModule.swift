@@ -12,4 +12,8 @@ extension Container {
     var leagueViewModel: Factory<LeagueViewModel> {
         self { LeagueViewModel() }
     }
+    
+    var teamViewModel: Factory<TeamViewModel> {
+        self { TeamViewModel() }
+    }
 }

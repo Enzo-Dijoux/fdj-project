@@ -14,4 +14,10 @@ extension Container {
             LeagueRepositoryImpl(service: LeagueService()) as LeagueRepository
         }
     }
+    
+    var teamRepository: Factory<TeamRepository> {
+        self {
+            TeamRepositoryImpl(service: TeamService()) as TeamRepository
+        }
+    }
 }

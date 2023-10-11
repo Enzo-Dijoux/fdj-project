@@ -47,6 +47,9 @@
 		C611B6F62AD6E83300610220 /* FResourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6F52AD6E83300610220 /* FResourceExtensions.swift */; };
 		C611B6F82AD6EA1600610220 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6F72AD6EA1600610220 /* StringExtensions.swift */; };
 		C611B6FB2AD6EACF00610220 /* ViewModelModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */; };
+		C611B6FE2AD6F16800610220 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C611B6FD2AD6F16800610220 /* Kingfisher */; };
+		C611B7012AD6F19A00610220 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B7002AD6F19A00610220 /* TeamViewModel.swift */; };
+		C611B7042AD6F5AF00610220 /* FImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B7032AD6F5AF00610220 /* FImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +111,8 @@
 		C611B6F52AD6E83300610220 /* FResourceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResourceExtensions.swift; sourceTree = "<group>"; };
 		C611B6F72AD6EA1600610220 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelModule.swift; sourceTree = "<group>"; };
+		C611B7002AD6F19A00610220 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		C611B7032AD6F5AF00610220 /* FImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C611B6FE2AD6F16800610220 /* Kingfisher in Frameworks */,
 				C611B6932AD6A84100610220 /* Alamofire in Frameworks */,
 				C611B6962AD6A85100610220 /* Factory in Frameworks */,
 			);
@@ -213,11 +219,12 @@
 		C611B68A2AD6A63300610220 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C611B6C72AD6DAF800610220 /* Model */,
 				C611B6B82AD6D5BF00610220 /* Common */,
-				C611B69C2AD6C6F900610220 /* Network */,
 				C611B68B2AD6A64700610220 /* Data */,
+				C611B6C72AD6DAF800610220 /* Model */,
+				C611B69C2AD6C6F900610220 /* Network */,
 				C611B68C2AD6A64D00610220 /* Service */,
+				C611B7022AD6F5A400610220 /* UI */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -468,6 +475,7 @@
 			children = (
 				C611B6602AD6A33E00610220 /* LeagueScreen.swift */,
 				C611B6F22AD6E6EC00610220 /* LeagueViewModel.swift */,
+				C611B7052AD6F87200610220 /* Team */,
 			);
 			path = League;
 			sourceTree = "<group>";
@@ -486,6 +494,22 @@
 				C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		C611B7022AD6F5A400610220 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C611B7032AD6F5AF00610220 /* FImage.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C611B7052AD6F87200610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B7002AD6F19A00610220 /* TeamViewModel.swift */,
+			);
+			path = Team;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +531,7 @@
 			packageProductDependencies = (
 				C611B6922AD6A84100610220 /* Alamofire */,
 				C611B6952AD6A85100610220 /* Factory */,
+				C611B6FD2AD6F16800610220 /* Kingfisher */,
 			);
 			productName = FDJ;
 			productReference = C611B65B2AD6A33E00610220 /* FDJ.app */;
@@ -583,6 +608,7 @@
 			packageReferences = (
 				C611B6912AD6A84100610220 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C611B6942AD6A85100610220 /* XCRemoteSwiftPackageReference "Factory" */,
+				C611B6FC2AD6F16800610220 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C611B65C2AD6A33E00610220 /* Products */;
 			projectDirPath = "";
@@ -633,6 +659,7 @@
 				C611B6FB2AD6EACF00610220 /* ViewModelModule.swift in Sources */,
 				C611B6C42AD6D86B00610220 /* NetworkTeamResponse.swift in Sources */,
 				C611B6F32AD6E6EC00610220 /* LeagueViewModel.swift in Sources */,
+				C611B7012AD6F19A00610220 /* TeamViewModel.swift in Sources */,
 				C611B6612AD6A33E00610220 /* LeagueScreen.swift in Sources */,
 				C611B6B42AD6D48700610220 /* LeagueService.swift in Sources */,
 				C611B6D72AD6DD6D00610220 /* FResource.swift in Sources */,
@@ -656,6 +683,7 @@
 				C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */,
 				C611B65F2AD6A33E00610220 /* FDJApp.swift in Sources */,
 				C611B6CB2AD6DB6100610220 /* League.swift in Sources */,
+				C611B7042AD6F5AF00610220 /* FImage.swift in Sources */,
 				C611B6B12AD6CC8300610220 /* BaseService.swift in Sources */,
 				C611B6EE2AD6E52C00610220 /* TeamRepository.swift in Sources */,
 				C611B6E62AD6E23D00610220 /* RepositoryPublisher.swift in Sources */,
@@ -995,6 +1023,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		C611B6FC2AD6F16800610220 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1007,6 +1043,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C611B6942AD6A85100610220 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
+		};
+		C611B6FD2AD6F16800610220 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C611B6FC2AD6F16800610220 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
