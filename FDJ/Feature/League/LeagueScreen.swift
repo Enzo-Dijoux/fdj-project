@@ -9,17 +9,20 @@ import SwiftUI
 import Factory
 
 struct LeagueScreenRoute: View {
-    @StateObject private var _leagueViewModel = Container.shared.leagueViewModel()
-    @StateObject private var _teamViewModel = Container.shared.teamViewModel()
+    @StateObject private var leagueViewModel = Container.shared.leagueViewModel()
+    @StateObject private var teamViewModel = Container.shared.teamViewModel()
 
     var body: some View {
-        let teamState = _teamViewModel.state
-        LeagueScreen(leagueState: _leagueViewModel.state, teamState: teamState, onLeaguePressed: { league in
-            _teamViewModel.fetch(league: league)
+        let teamState = teamViewModel.state
+        let leagueState = leagueViewModel.state
+        LeagueScreen(leagueState: leagueState, teamState: teamState, onLeaguePressed: { league in
+            teamViewModel.fetch(league: league)
         }, onSearchChanged: { search in
             if !teamState.isInitial() {
-                _teamViewModel.resetState()
+                teamViewModel.resetState()
             }
+        }, leaguesFiltered: { search in
+            leagueViewModel.filterLeagues(leagues: leagueState.getLeagues(), searchText: search)
         })
     }
 }
@@ -29,13 +32,14 @@ private struct LeagueScreen: View {
     let teamState: TeamUiState
     let onLeaguePressed: (_ league: String) -> Void
     let onSearchChanged: (_ search: String) -> Void
+    let leaguesFiltered: (_ search: String) -> [League]
 
     var body: some View {
         switch leagueState {
         case .loading:
             LoadingView()
-        case .success(let leagues):
-            SuccessView(teamState: teamState, leagues: leagues, onSearchChanged: onSearchChanged, onLeaguePressed: onLeaguePressed)
+        case .success:
+            SuccessView(teamState: teamState, onSearchChanged: onSearchChanged, onLeaguePressed: onLeaguePressed, leaguesFiltered: leaguesFiltered)
         case .error(let message):
             ErrorView(message: message)
         }
@@ -44,9 +48,9 @@ private struct LeagueScreen: View {
 
 private struct SuccessView: View {
     let teamState: TeamUiState
-    let leagues: [League]
     let onSearchChanged: (_ search: String) -> Void
     let onLeaguePressed: (_ league: String) -> Void
+    let leaguesFiltered: (_ search: String) -> [League]
 
     @State private var searchText = ""
 
@@ -54,7 +58,9 @@ private struct SuccessView: View {
         NavigationStack {
             switch teamState {
             case .initial:
-                LeagueList(leagues: leagues, searchText: searchText, onLeaguePressed: onLeaguePressed)
+                LeagueList(leagues: leaguesFiltered(searchText).map({ league in
+                    league.name
+                }), onLeaguePressed: onLeaguePressed)
             case .loading:
                 LoadingView()
             case .success(let teams):
@@ -68,15 +74,14 @@ private struct SuccessView: View {
             onSearchChanged(newValue)
         }
     }
-            
+                
     private struct LeagueList: View {
-        let leagues: [League]
-        let searchText: String
+        let leagues: [String]
         let onLeaguePressed: (_ league: String) -> Void
 
         var body: some View {
             List {
-                ForEach(searchResults(leagues: leagues), id: \.self) { name in
+                ForEach(leagues, id: \.self) { name in
                     Button {
                         onLeaguePressed(name)
                     } label: {
@@ -84,16 +89,6 @@ private struct SuccessView: View {
                     }.buttonStyle(.plain)
                 }
             }
-        }
-        
-        private func searchResults(leagues: [League]) -> [String] {
-            var finalResult: [League] = leagues
-            if !searchText.isEmpty {
-                finalResult = leagues.filter({ league in
-                    league.name.lowercased().contains(searchText.lowercased())
-                })
-            }
-            return finalResult.map { $0.name }
         }
     }
     
@@ -109,27 +104,13 @@ private struct SuccessView: View {
         var body: some View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(filteredTeams(teams), id: \.id) { team in
+                    ForEach(teams, id: \.id) { team in
                         FImage(url: URL(string: team.logo))
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100, maxHeight: 100)
                     }
                 }
                 .padding()
             }
-        }
-        
-        private func filteredTeams(_ teams: [Team]) -> [Team] {
-            //Filter teams by name in anti-alphabetical order.
-            let teamsSortedByName = teams.sorted { first, second in
-                first.name > second.name
-            }
-            //Filter teams to display only pair elements
-            let teamFiltered = teamsSortedByName.enumerated().filter({ element in
-                element.offset % 2 == 0
-            }).map({ element in
-                element.element
-            })
-            return teamFiltered
         }
     }
 }
@@ -155,36 +136,48 @@ private struct ErrorView: View {
 
 struct LeagueScreenSuccess_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+            return []
+        })
     }
 }
 
 struct LeagueScreenSuccessTeamSuccess_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .success(teams: previewTeam), onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .success(teams: previewTeam), onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+            return []
+        })
     }
 }
 
 struct LeagueScreenSuccessTeamError_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .error(message: "Error occured on team fetched"), onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .error(message: "Error occured on team fetched"), onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+            return []
+        })
     }
 }
 
 struct LeagueScreenSuccessTeamLoading_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .loading, onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .loading, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+            return []
+        })
     }
 }
 
 struct LeagueScreenLoading_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .loading, teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+        LeagueScreen(leagueState: .loading, teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+            return []
+        })
     }
 }
 
 struct LeagueScreenError_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .error(message: "Error occured"), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in})
+        LeagueScreen(leagueState: .error(message: "Error occured"), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+            return []
+        })
     }
 }
