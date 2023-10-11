@@ -7,7 +7,7 @@
 
 import Foundation
 
-class League {
+class League: Equatable {
     let id: String
     let name: String
     let sport: String
@@ -18,6 +18,10 @@ class League {
         self.name = name
         self.sport = sport
         self.alternate = alternate
+    }
+    
+    static func == (lhs: League, rhs: League) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

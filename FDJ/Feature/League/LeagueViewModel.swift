@@ -32,6 +32,16 @@ class LeagueViewModel: ObservableObject {
             })
             .assign(to: &$state)
     }
+    
+    func filterLeagues(leagues: [League], searchText: String) -> [League] {
+        var finalResult: [League] = leagues
+        if !searchText.isEmpty {
+            finalResult = leagues.filter({ league in
+                league.name.lowercased().contains(searchText.lowercased())
+            })
+        }
+        return finalResult
+    }
 }
 
 enum LeagueUiState {
@@ -45,5 +55,14 @@ enum LeagueUiState {
             default: break
         }
         return false
+    }
+    
+    func getLeagues() -> [League] {
+        switch self {
+            case .success(let leagues):
+            return leagues
+            default: break
+        }
+        return []
     }
 }
