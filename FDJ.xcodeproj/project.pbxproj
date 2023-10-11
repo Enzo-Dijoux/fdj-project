@@ -11,7 +11,7 @@
 		C611B6612AD6A33E00610220 /* LeagueScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6602AD6A33E00610220 /* LeagueScreen.swift */; };
 		C611B6632AD6A33F00610220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C611B6622AD6A33F00610220 /* Assets.xcassets */; };
 		C611B6662AD6A33F00610220 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C611B6652AD6A33F00610220 /* Preview Assets.xcassets */; };
-		C611B6702AD6A33F00610220 /* FDJTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B66F2AD6A33F00610220 /* FDJTests.swift */; };
+		C611B6702AD6A33F00610220 /* LeagueViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B66F2AD6A33F00610220 /* LeagueViewModelTests.swift */; };
 		C611B67A2AD6A33F00610220 /* FDJUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6792AD6A33F00610220 /* FDJUITests.swift */; };
 		C611B67C2AD6A33F00610220 /* FDJUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B67B2AD6A33F00610220 /* FDJUITestsLaunchTests.swift */; };
 		C611B6932AD6A84100610220 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C611B6922AD6A84100610220 /* Alamofire */; };
@@ -50,6 +50,9 @@
 		C611B6FE2AD6F16800610220 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C611B6FD2AD6F16800610220 /* Kingfisher */; };
 		C611B7012AD6F19A00610220 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B7002AD6F19A00610220 /* TeamViewModel.swift */; };
 		C611B7042AD6F5AF00610220 /* FImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B7032AD6F5AF00610220 /* FImage.swift */; };
+		C611B7082AD72E9700610220 /* MockLeagueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B7072AD72E9700610220 /* MockLeagueRepository.swift */; };
+		C611B70B2AD7330200610220 /* TeamViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B70A2AD7330200610220 /* TeamViewModelTests.swift */; };
+		C611B70D2AD7330A00610220 /* MockTeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B70C2AD7330A00610220 /* MockTeamRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +79,7 @@
 		C611B6622AD6A33F00610220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C611B6652AD6A33F00610220 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C611B66B2AD6A33F00610220 /* FDJTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDJTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C611B66F2AD6A33F00610220 /* FDJTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJTests.swift; sourceTree = "<group>"; };
+		C611B66F2AD6A33F00610220 /* LeagueViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewModelTests.swift; sourceTree = "<group>"; };
 		C611B6752AD6A33F00610220 /* FDJUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDJUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C611B6792AD6A33F00610220 /* FDJUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJUITests.swift; sourceTree = "<group>"; };
 		C611B67B2AD6A33F00610220 /* FDJUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -113,6 +116,9 @@
 		C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelModule.swift; sourceTree = "<group>"; };
 		C611B7002AD6F19A00610220 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		C611B7032AD6F5AF00610220 /* FImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FImage.swift; sourceTree = "<group>"; };
+		C611B7072AD72E9700610220 /* MockLeagueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLeagueRepository.swift; sourceTree = "<group>"; };
+		C611B70A2AD7330200610220 /* TeamViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModelTests.swift; sourceTree = "<group>"; };
+		C611B70C2AD7330A00610220 /* MockTeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTeamRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +191,8 @@
 		C611B66E2AD6A33F00610220 /* FDJTests */ = {
 			isa = PBXGroup;
 			children = (
-				C611B66F2AD6A33F00610220 /* FDJTests.swift */,
+				C611B7092AD7328600610220 /* Team */,
+				C611B7062AD72E8D00610220 /* League */,
 			);
 			path = FDJTests;
 			sourceTree = "<group>";
@@ -512,6 +519,24 @@
 			path = Team;
 			sourceTree = "<group>";
 		};
+		C611B7062AD72E8D00610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B66F2AD6A33F00610220 /* LeagueViewModelTests.swift */,
+				C611B7072AD72E9700610220 /* MockLeagueRepository.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B7092AD7328600610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B70A2AD7330200610220 /* TeamViewModelTests.swift */,
+				C611B70C2AD7330A00610220 /* MockTeamRepository.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -694,7 +719,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C611B6702AD6A33F00610220 /* FDJTests.swift in Sources */,
+				C611B70D2AD7330A00610220 /* MockTeamRepository.swift in Sources */,
+				C611B7082AD72E9700610220 /* MockLeagueRepository.swift in Sources */,
+				C611B70B2AD7330200610220 /* TeamViewModelTests.swift in Sources */,
+				C611B6702AD6A33F00610220 /* LeagueViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

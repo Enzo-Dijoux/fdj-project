@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Team {
+class Team: Equatable {
     let id: String
     let name: String
     let logo: String
@@ -16,6 +16,10 @@ class Team {
         self.id = id
         self.name = name
         self.logo = logo
+    }
+    
+    static func == (lhs: Team, rhs: Team) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 
