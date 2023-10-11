@@ -19,7 +19,7 @@ extension KeyedDecodingContainer {
     ///   - key: key that the decoded value is associated with
     ///   - defaultValue: default value to use if decoded value is nil
     /// - Returns: decoded value or default
-    public func decodeIfPresentSafe<T>(_ type: T.Type, forKey key: KeyedDecodingContainer<K>.Key, defaultValue:T) -> T where T : Decodable{
+    public func decodeIfPresentSafe<T>(_ type: T.Type, forKey key: KeyedDecodingContainer<K>.Key, defaultValue:T) -> T where T : Decodable {
         return decodeIfPresentSafe(type, forKey: key) ?? defaultValue
     }
 }

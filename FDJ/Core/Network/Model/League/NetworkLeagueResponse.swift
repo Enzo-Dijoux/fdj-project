@@ -22,3 +22,11 @@ extension LeagueService {
         }
     }
 }
+
+extension LeagueService.NetworkLeagueReponse {
+    func asExternalModel() -> LeagueResponse {
+        LeagueResponse(leagues: leagues.map({ network in
+            network.asExternalModel()
+        }))
+    }
+}

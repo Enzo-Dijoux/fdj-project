@@ -31,3 +31,9 @@ extension LeagueService.NetworkLeagueReponse {
         }
     }
 }
+
+extension LeagueService.NetworkLeagueReponse.NetworkLeague {
+    func asExternalModel() -> League {
+        League(id: id, name: name, sport: sport, alternate: alternate)
+    }
+}

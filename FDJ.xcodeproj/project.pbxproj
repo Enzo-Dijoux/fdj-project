@@ -28,6 +28,17 @@
 		C611B6C02AD6D81200610220 /* TeamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BF2AD6D81200610220 /* TeamService.swift */; };
 		C611B6C42AD6D86B00610220 /* NetworkTeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6C32AD6D86B00610220 /* NetworkTeamResponse.swift */; };
 		C611B6C62AD6D87200610220 /* NetworkTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6C52AD6D87200610220 /* NetworkTeam.swift */; };
+		C611B6CB2AD6DB6100610220 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6CA2AD6DB6100610220 /* League.swift */; };
+		C611B6CD2AD6DB8F00610220 /* LeagueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6CC2AD6DB8F00610220 /* LeagueResponse.swift */; };
+		C611B6D12AD6DCB400610220 /* LeagueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6D02AD6DCB400610220 /* LeagueRepository.swift */; };
+		C611B6D32AD6DCBB00610220 /* LeagueRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6D22AD6DCBB00610220 /* LeagueRepositoryImpl.swift */; };
+		C611B6D72AD6DD6D00610220 /* FResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6D62AD6DD6D00610220 /* FResource.swift */; };
+		C611B6D92AD6DD9500610220 /* ResourceLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6D82AD6DD9500610220 /* ResourceLoading.swift */; };
+		C611B6DB2AD6DD9F00610220 /* ResourceEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6DA2AD6DD9F00610220 /* ResourceEmpty.swift */; };
+		C611B6DD2AD6DDB400610220 /* ResourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6DC2AD6DDB400610220 /* ResourceError.swift */; };
+		C611B6DF2AD6DDC200610220 /* ResourceSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6DE2AD6DDC200610220 /* ResourceSuccess.swift */; };
+		C611B6E22AD6E19F00610220 /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6E12AD6E19F00610220 /* RepositoryModule.swift */; };
+		C611B6E62AD6E23D00610220 /* RepositoryPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6E52AD6E23D00610220 /* RepositoryPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +81,17 @@
 		C611B6BF2AD6D81200610220 /* TeamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamService.swift; sourceTree = "<group>"; };
 		C611B6C32AD6D86B00610220 /* NetworkTeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTeamResponse.swift; sourceTree = "<group>"; };
 		C611B6C52AD6D87200610220 /* NetworkTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTeam.swift; sourceTree = "<group>"; };
+		C611B6CA2AD6DB6100610220 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		C611B6CC2AD6DB8F00610220 /* LeagueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueResponse.swift; sourceTree = "<group>"; };
+		C611B6D02AD6DCB400610220 /* LeagueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRepository.swift; sourceTree = "<group>"; };
+		C611B6D22AD6DCBB00610220 /* LeagueRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRepositoryImpl.swift; sourceTree = "<group>"; };
+		C611B6D62AD6DD6D00610220 /* FResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResource.swift; sourceTree = "<group>"; };
+		C611B6D82AD6DD9500610220 /* ResourceLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoading.swift; sourceTree = "<group>"; };
+		C611B6DA2AD6DD9F00610220 /* ResourceEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceEmpty.swift; sourceTree = "<group>"; };
+		C611B6DC2AD6DDB400610220 /* ResourceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceError.swift; sourceTree = "<group>"; };
+		C611B6DE2AD6DDC200610220 /* ResourceSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceSuccess.swift; sourceTree = "<group>"; };
+		C611B6E12AD6E19F00610220 /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
+		C611B6E52AD6E23D00610220 /* RepositoryPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +198,7 @@
 		C611B68A2AD6A63300610220 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C611B6C72AD6DAF800610220 /* Model */,
 				C611B6B82AD6D5BF00610220 /* Common */,
 				C611B69C2AD6C6F900610220 /* Network */,
 				C611B68B2AD6A64700610220 /* Data */,
@@ -187,6 +210,8 @@
 		C611B68B2AD6A64700610220 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C611B6C82AD6DAFE00610220 /* Repository */,
+				C611B6D42AD6DD5800610220 /* Util */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -327,6 +352,78 @@
 			path = Team;
 			sourceTree = "<group>";
 		};
+		C611B6C72AD6DAF800610220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6C92AD6DB5300610220 /* League */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C611B6C82AD6DAFE00610220 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E02AD6E18F00610220 /* DI */,
+				C611B6CF2AD6DCA900610220 /* League */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C611B6C92AD6DB5300610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6CA2AD6DB6100610220 /* League.swift */,
+				C611B6CC2AD6DB8F00610220 /* LeagueResponse.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6CF2AD6DCA900610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6D02AD6DCB400610220 /* LeagueRepository.swift */,
+				C611B6D22AD6DCBB00610220 /* LeagueRepositoryImpl.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6D42AD6DD5800610220 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E42AD6E21D00610220 /* RepositoryPublisher */,
+				C611B6D52AD6DD6400610220 /* Resource */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C611B6D52AD6DD6400610220 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6D62AD6DD6D00610220 /* FResource.swift */,
+				C611B6DA2AD6DD9F00610220 /* ResourceEmpty.swift */,
+				C611B6D82AD6DD9500610220 /* ResourceLoading.swift */,
+				C611B6DC2AD6DDB400610220 /* ResourceError.swift */,
+				C611B6DE2AD6DDC200610220 /* ResourceSuccess.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C611B6E02AD6E18F00610220 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E12AD6E19F00610220 /* RepositoryModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		C611B6E42AD6E21D00610220 /* RepositoryPublisher */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E52AD6E23D00610220 /* RepositoryPublisher.swift */,
+			);
+			path = RepositoryPublisher;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -465,20 +562,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C611B6D32AD6DCBB00610220 /* LeagueRepositoryImpl.swift in Sources */,
 				C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */,
+				C611B6CD2AD6DB8F00610220 /* LeagueResponse.swift in Sources */,
 				C611B6C42AD6D86B00610220 /* NetworkTeamResponse.swift in Sources */,
 				C611B6612AD6A33E00610220 /* ContentView.swift in Sources */,
 				C611B6B42AD6D48700610220 /* LeagueService.swift in Sources */,
+				C611B6D72AD6DD6D00610220 /* FResource.swift in Sources */,
+				C611B6DB2AD6DD9F00610220 /* ResourceEmpty.swift in Sources */,
+				C611B6DF2AD6DDC200610220 /* ResourceSuccess.swift in Sources */,
 				C611B6BB2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift in Sources */,
+				C611B6D12AD6DCB400610220 /* LeagueRepository.swift in Sources */,
 				C611B6C02AD6D81200610220 /* TeamService.swift in Sources */,
 				C611B6B72AD6D4E400610220 /* NetworkLeague.swift in Sources */,
 				C611B6C62AD6D87200610220 /* NetworkTeam.swift in Sources */,
 				C611B6A12AD6C71E00610220 /* FResponse.swift in Sources */,
+				C611B6E22AD6E19F00610220 /* RepositoryModule.swift in Sources */,
+				C611B6DD2AD6DDB400610220 /* ResourceError.swift in Sources */,
 				C611B6BD2AD6D66B00610220 /* NetworkLeagueResponse.swift in Sources */,
+				C611B6D92AD6DD9500610220 /* ResourceLoading.swift in Sources */,
 				C611B6A32AD6C72700610220 /* FResponseExtensions.swift in Sources */,
 				C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */,
 				C611B65F2AD6A33E00610220 /* FDJApp.swift in Sources */,
+				C611B6CB2AD6DB6100610220 /* League.swift in Sources */,
 				C611B6B12AD6CC8300610220 /* BaseService.swift in Sources */,
+				C611B6E62AD6E23D00610220 /* RepositoryPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
