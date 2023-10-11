@@ -21,7 +21,7 @@ struct LeagueScreenRoute: View {
             if !teamState.isInitial() {
                 teamViewModel.resetState()
             }
-        }, leaguesFiltered: { search in
+        }, leaguesFilteredBySearch: { search in
             leagueViewModel.filterLeagues(leagues: leagueState.getLeagues(), searchText: search)
         })
     }
@@ -32,14 +32,14 @@ private struct LeagueScreen: View {
     let teamState: TeamUiState
     let onLeaguePressed: (_ league: String) -> Void
     let onSearchChanged: (_ search: String) -> Void
-    let leaguesFiltered: (_ search: String) -> [League]
+    let leaguesFilteredBySearch: (_ search: String) -> [League]
 
     var body: some View {
         switch leagueState {
         case .loading:
             LoadingView()
         case .success:
-            SuccessView(teamState: teamState, onSearchChanged: onSearchChanged, onLeaguePressed: onLeaguePressed, leaguesFiltered: leaguesFiltered)
+            SuccessView(teamState: teamState, onSearchChanged: onSearchChanged, onLeaguePressed: onLeaguePressed, leaguesFilteredBySearch: leaguesFilteredBySearch)
         case .error(let message):
             ErrorView(message: message)
         }
@@ -50,7 +50,7 @@ private struct SuccessView: View {
     let teamState: TeamUiState
     let onSearchChanged: (_ search: String) -> Void
     let onLeaguePressed: (_ league: String) -> Void
-    let leaguesFiltered: (_ search: String) -> [League]
+    let leaguesFilteredBySearch: (_ search: String) -> [League]
 
     @State private var searchText = ""
 
@@ -58,7 +58,7 @@ private struct SuccessView: View {
         NavigationStack {
             switch teamState {
             case .initial:
-                LeagueList(leagues: leaguesFiltered(searchText).map({ league in
+                LeagueList(leagues: leaguesFilteredBySearch(searchText).map({ league in
                     league.name
                 }), onLeaguePressed: onLeaguePressed)
             case .loading:
@@ -136,7 +136,7 @@ private struct ErrorView: View {
 
 struct LeagueScreenSuccess_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFilteredBySearch: {_ in
             return []
         })
     }
@@ -144,7 +144,7 @@ struct LeagueScreenSuccess_Previews: PreviewProvider {
 
 struct LeagueScreenSuccessTeamSuccess_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .success(teams: previewTeam), onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .success(teams: previewTeam), onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFilteredBySearch: {_ in
             return []
         })
     }
@@ -152,7 +152,7 @@ struct LeagueScreenSuccessTeamSuccess_Previews: PreviewProvider {
 
 struct LeagueScreenSuccessTeamError_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .error(message: "Error occured on team fetched"), onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .error(message: "Error occured on team fetched"), onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFilteredBySearch: {_ in
             return []
         })
     }
@@ -160,7 +160,7 @@ struct LeagueScreenSuccessTeamError_Previews: PreviewProvider {
 
 struct LeagueScreenSuccessTeamLoading_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .loading, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+        LeagueScreen(leagueState: .success(leagues: previewLeague), teamState: .loading, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFilteredBySearch: {_ in
             return []
         })
     }
@@ -168,7 +168,7 @@ struct LeagueScreenSuccessTeamLoading_Previews: PreviewProvider {
 
 struct LeagueScreenLoading_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .loading, teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+        LeagueScreen(leagueState: .loading, teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFilteredBySearch: {_ in
             return []
         })
     }
@@ -176,7 +176,7 @@ struct LeagueScreenLoading_Previews: PreviewProvider {
 
 struct LeagueScreenError_Previews: PreviewProvider {
     static var previews: some View {
-        LeagueScreen(leagueState: .error(message: "Error occured"), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFiltered: {_ in
+        LeagueScreen(leagueState: .error(message: "Error occured"), teamState: .initial, onLeaguePressed: {_ in}, onSearchChanged: {_ in}, leaguesFilteredBySearch: {_ in
             return []
         })
     }
