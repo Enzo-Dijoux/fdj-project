@@ -25,6 +25,9 @@
 		C611B6B72AD6D4E400610220 /* NetworkLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6B62AD6D4E400610220 /* NetworkLeague.swift */; };
 		C611B6BB2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */; };
 		C611B6BD2AD6D66B00610220 /* NetworkLeagueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */; };
+		C611B6C02AD6D81200610220 /* TeamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BF2AD6D81200610220 /* TeamService.swift */; };
+		C611B6C42AD6D86B00610220 /* NetworkTeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6C32AD6D86B00610220 /* NetworkTeamResponse.swift */; };
+		C611B6C62AD6D87200610220 /* NetworkTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6C52AD6D87200610220 /* NetworkTeam.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		C611B6B62AD6D4E400610220 /* NetworkLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLeague.swift; sourceTree = "<group>"; };
 		C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
 		C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLeagueResponse.swift; sourceTree = "<group>"; };
+		C611B6BF2AD6D81200610220 /* TeamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamService.swift; sourceTree = "<group>"; };
+		C611B6C32AD6D86B00610220 /* NetworkTeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTeamResponse.swift; sourceTree = "<group>"; };
+		C611B6C52AD6D87200610220 /* NetworkTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTeam.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,7 @@
 		C611B68C2AD6A64D00610220 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C611B6BE2AD6D80A00610220 /* Team */,
 				C611B6B22AD6D46A00610220 /* League */,
 				C611B68E2AD6A81B00610220 /* Base */,
 			);
@@ -272,8 +279,8 @@
 		C611B6B52AD6D4D600610220 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C611B6B62AD6D4E400610220 /* NetworkLeague.swift */,
-				C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */,
+				C611B6C12AD6D84D00610220 /* League */,
+				C611B6C22AD6D85700610220 /* Team */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +299,32 @@
 				C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C611B6BE2AD6D80A00610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6BF2AD6D81200610220 /* TeamService.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		C611B6C12AD6D84D00610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B62AD6D4E400610220 /* NetworkLeague.swift */,
+				C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6C22AD6D85700610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6C32AD6D86B00610220 /* NetworkTeamResponse.swift */,
+				C611B6C52AD6D87200610220 /* NetworkTeam.swift */,
+			);
+			path = Team;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,10 +466,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */,
+				C611B6C42AD6D86B00610220 /* NetworkTeamResponse.swift in Sources */,
 				C611B6612AD6A33E00610220 /* ContentView.swift in Sources */,
 				C611B6B42AD6D48700610220 /* LeagueService.swift in Sources */,
 				C611B6BB2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift in Sources */,
+				C611B6C02AD6D81200610220 /* TeamService.swift in Sources */,
 				C611B6B72AD6D4E400610220 /* NetworkLeague.swift in Sources */,
+				C611B6C62AD6D87200610220 /* NetworkTeam.swift in Sources */,
 				C611B6A12AD6C71E00610220 /* FResponse.swift in Sources */,
 				C611B6BD2AD6D66B00610220 /* NetworkLeagueResponse.swift in Sources */,
 				C611B6A32AD6C72700610220 /* FResponseExtensions.swift in Sources */,
