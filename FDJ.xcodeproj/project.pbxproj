@@ -8,12 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		C611B65F2AD6A33E00610220 /* FDJApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B65E2AD6A33E00610220 /* FDJApp.swift */; };
-		C611B6612AD6A33E00610220 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6602AD6A33E00610220 /* ContentView.swift */; };
+		C611B6612AD6A33E00610220 /* LeagueScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6602AD6A33E00610220 /* LeagueScreen.swift */; };
 		C611B6632AD6A33F00610220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C611B6622AD6A33F00610220 /* Assets.xcassets */; };
 		C611B6662AD6A33F00610220 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C611B6652AD6A33F00610220 /* Preview Assets.xcassets */; };
 		C611B6702AD6A33F00610220 /* FDJTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B66F2AD6A33F00610220 /* FDJTests.swift */; };
 		C611B67A2AD6A33F00610220 /* FDJUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6792AD6A33F00610220 /* FDJUITests.swift */; };
 		C611B67C2AD6A33F00610220 /* FDJUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B67B2AD6A33F00610220 /* FDJUITestsLaunchTests.swift */; };
+		C611B6932AD6A84100610220 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C611B6922AD6A84100610220 /* Alamofire */; };
+		C611B6962AD6A85100610220 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C611B6952AD6A85100610220 /* Factory */; };
+		C611B6A12AD6C71E00610220 /* FResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6A02AD6C71E00610220 /* FResponse.swift */; };
+		C611B6A32AD6C72700610220 /* FResponseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6A22AD6C72700610220 /* FResponseExtensions.swift */; };
+		C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6AC2AD6C7DC00610220 /* DecodableParser.swift */; };
+		C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6AE2AD6C7E400610220 /* BaseParser.swift */; };
+		C611B6B12AD6CC8300610220 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6B02AD6CC8300610220 /* BaseService.swift */; };
+		C611B6B42AD6D48700610220 /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6B32AD6D48700610220 /* LeagueService.swift */; };
+		C611B6B72AD6D4E400610220 /* NetworkLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6B62AD6D4E400610220 /* NetworkLeague.swift */; };
+		C611B6BB2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */; };
+		C611B6BD2AD6D66B00610220 /* NetworkLeagueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */; };
+		C611B6C02AD6D81200610220 /* TeamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6BF2AD6D81200610220 /* TeamService.swift */; };
+		C611B6C42AD6D86B00610220 /* NetworkTeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6C32AD6D86B00610220 /* NetworkTeamResponse.swift */; };
+		C611B6C62AD6D87200610220 /* NetworkTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6C52AD6D87200610220 /* NetworkTeam.swift */; };
+		C611B6CB2AD6DB6100610220 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6CA2AD6DB6100610220 /* League.swift */; };
+		C611B6CD2AD6DB8F00610220 /* LeagueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6CC2AD6DB8F00610220 /* LeagueResponse.swift */; };
+		C611B6D12AD6DCB400610220 /* LeagueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6D02AD6DCB400610220 /* LeagueRepository.swift */; };
+		C611B6D32AD6DCBB00610220 /* LeagueRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6D22AD6DCBB00610220 /* LeagueRepositoryImpl.swift */; };
+		C611B6D72AD6DD6D00610220 /* FResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6D62AD6DD6D00610220 /* FResource.swift */; };
+		C611B6D92AD6DD9500610220 /* ResourceLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6D82AD6DD9500610220 /* ResourceLoading.swift */; };
+		C611B6DB2AD6DD9F00610220 /* ResourceEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6DA2AD6DD9F00610220 /* ResourceEmpty.swift */; };
+		C611B6DD2AD6DDB400610220 /* ResourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6DC2AD6DDB400610220 /* ResourceError.swift */; };
+		C611B6DF2AD6DDC200610220 /* ResourceSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6DE2AD6DDC200610220 /* ResourceSuccess.swift */; };
+		C611B6E22AD6E19F00610220 /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6E12AD6E19F00610220 /* RepositoryModule.swift */; };
+		C611B6E62AD6E23D00610220 /* RepositoryPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6E52AD6E23D00610220 /* RepositoryPublisher.swift */; };
+		C611B6E92AD6E3EE00610220 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6E82AD6E3EE00610220 /* Team.swift */; };
+		C611B6EB2AD6E3F400610220 /* TeamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6EA2AD6E3F400610220 /* TeamResponse.swift */; };
+		C611B6EE2AD6E52C00610220 /* TeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6ED2AD6E52C00610220 /* TeamRepository.swift */; };
+		C611B6F02AD6E53600610220 /* TeamRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6EF2AD6E53600610220 /* TeamRepositoryImpl.swift */; };
+		C611B6F32AD6E6EC00610220 /* LeagueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6F22AD6E6EC00610220 /* LeagueViewModel.swift */; };
+		C611B6F62AD6E83300610220 /* FResourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6F52AD6E83300610220 /* FResourceExtensions.swift */; };
+		C611B6F82AD6EA1600610220 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6F72AD6EA1600610220 /* StringExtensions.swift */; };
+		C611B6FB2AD6EACF00610220 /* ViewModelModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */; };
+		C611B6FE2AD6F16800610220 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C611B6FD2AD6F16800610220 /* Kingfisher */; };
+		C611B7012AD6F19A00610220 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B7002AD6F19A00610220 /* TeamViewModel.swift */; };
+		C611B7042AD6F5AF00610220 /* FImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611B7032AD6F5AF00610220 /* FImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +72,7 @@
 /* Begin PBXFileReference section */
 		C611B65B2AD6A33E00610220 /* FDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C611B65E2AD6A33E00610220 /* FDJApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJApp.swift; sourceTree = "<group>"; };
-		C611B6602AD6A33E00610220 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C611B6602AD6A33E00610220 /* LeagueScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueScreen.swift; sourceTree = "<group>"; };
 		C611B6622AD6A33F00610220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C611B6652AD6A33F00610220 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C611B66B2AD6A33F00610220 /* FDJTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDJTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +80,39 @@
 		C611B6752AD6A33F00610220 /* FDJUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDJUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C611B6792AD6A33F00610220 /* FDJUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJUITests.swift; sourceTree = "<group>"; };
 		C611B67B2AD6A33F00610220 /* FDJUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C611B6A02AD6C71E00610220 /* FResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResponse.swift; sourceTree = "<group>"; };
+		C611B6A22AD6C72700610220 /* FResponseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResponseExtensions.swift; sourceTree = "<group>"; };
+		C611B6AC2AD6C7DC00610220 /* DecodableParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableParser.swift; sourceTree = "<group>"; };
+		C611B6AE2AD6C7E400610220 /* BaseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParser.swift; sourceTree = "<group>"; };
+		C611B6B02AD6CC8300610220 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		C611B6B32AD6D48700610220 /* LeagueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueService.swift; sourceTree = "<group>"; };
+		C611B6B62AD6D4E400610220 /* NetworkLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLeague.swift; sourceTree = "<group>"; };
+		C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
+		C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLeagueResponse.swift; sourceTree = "<group>"; };
+		C611B6BF2AD6D81200610220 /* TeamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamService.swift; sourceTree = "<group>"; };
+		C611B6C32AD6D86B00610220 /* NetworkTeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTeamResponse.swift; sourceTree = "<group>"; };
+		C611B6C52AD6D87200610220 /* NetworkTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTeam.swift; sourceTree = "<group>"; };
+		C611B6CA2AD6DB6100610220 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		C611B6CC2AD6DB8F00610220 /* LeagueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueResponse.swift; sourceTree = "<group>"; };
+		C611B6D02AD6DCB400610220 /* LeagueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRepository.swift; sourceTree = "<group>"; };
+		C611B6D22AD6DCBB00610220 /* LeagueRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRepositoryImpl.swift; sourceTree = "<group>"; };
+		C611B6D62AD6DD6D00610220 /* FResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResource.swift; sourceTree = "<group>"; };
+		C611B6D82AD6DD9500610220 /* ResourceLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoading.swift; sourceTree = "<group>"; };
+		C611B6DA2AD6DD9F00610220 /* ResourceEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceEmpty.swift; sourceTree = "<group>"; };
+		C611B6DC2AD6DDB400610220 /* ResourceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceError.swift; sourceTree = "<group>"; };
+		C611B6DE2AD6DDC200610220 /* ResourceSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceSuccess.swift; sourceTree = "<group>"; };
+		C611B6E12AD6E19F00610220 /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
+		C611B6E52AD6E23D00610220 /* RepositoryPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPublisher.swift; sourceTree = "<group>"; };
+		C611B6E82AD6E3EE00610220 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		C611B6EA2AD6E3F400610220 /* TeamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponse.swift; sourceTree = "<group>"; };
+		C611B6ED2AD6E52C00610220 /* TeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRepository.swift; sourceTree = "<group>"; };
+		C611B6EF2AD6E53600610220 /* TeamRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRepositoryImpl.swift; sourceTree = "<group>"; };
+		C611B6F22AD6E6EC00610220 /* LeagueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewModel.swift; sourceTree = "<group>"; };
+		C611B6F52AD6E83300610220 /* FResourceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FResourceExtensions.swift; sourceTree = "<group>"; };
+		C611B6F72AD6EA1600610220 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelModule.swift; sourceTree = "<group>"; };
+		C611B7002AD6F19A00610220 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		C611B7032AD6F5AF00610220 /* FImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +120,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C611B6FE2AD6F16800610220 /* Kingfisher in Frameworks */,
+				C611B6932AD6A84100610220 /* Alamofire in Frameworks */,
+				C611B6962AD6A85100610220 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +166,9 @@
 		C611B65D2AD6A33E00610220 /* FDJ */ = {
 			isa = PBXGroup;
 			children = (
-				C611B65E2AD6A33E00610220 /* FDJApp.swift */,
-				C611B6602AD6A33E00610220 /* ContentView.swift */,
-				C611B6622AD6A33F00610220 /* Assets.xcassets */,
+				C611B6882AD6A5F700610220 /* Application */,
+				C611B68A2AD6A63300610220 /* Core */,
+				C611B68D2AD6A66C00610220 /* Feature */,
 				C611B6642AD6A33F00610220 /* Preview Content */,
 			);
 			path = FDJ;
@@ -127,6 +199,319 @@
 			path = FDJUITests;
 			sourceTree = "<group>";
 		};
+		C611B6882AD6A5F700610220 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6622AD6A33F00610220 /* Assets.xcassets */,
+				C611B6892AD6A60100610220 /* UI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C611B6892AD6A60100610220 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C611B65E2AD6A33E00610220 /* FDJApp.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C611B68A2AD6A63300610220 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B82AD6D5BF00610220 /* Common */,
+				C611B68B2AD6A64700610220 /* Data */,
+				C611B6C72AD6DAF800610220 /* Model */,
+				C611B69C2AD6C6F900610220 /* Network */,
+				C611B68C2AD6A64D00610220 /* Service */,
+				C611B7022AD6F5A400610220 /* UI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C611B68B2AD6A64700610220 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6C82AD6DAFE00610220 /* Repository */,
+				C611B6D42AD6DD5800610220 /* Util */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C611B68C2AD6A64D00610220 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6BE2AD6D80A00610220 /* Team */,
+				C611B6B22AD6D46A00610220 /* League */,
+				C611B68E2AD6A81B00610220 /* Base */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C611B68D2AD6A66C00610220 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6F92AD6EAB500610220 /* DI */,
+				C611B6F12AD6E69A00610220 /* League */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		C611B68E2AD6A81B00610220 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B02AD6CC8300610220 /* BaseService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C611B69C2AD6C6F900610220 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B52AD6D4D600610220 /* Model */,
+				C611B6AA2AD6C7BD00610220 /* Parser */,
+				C611B69D2AD6C6FD00610220 /* Util */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C611B69D2AD6C6FD00610220 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C611B69E2AD6C71000610220 /* Model */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C611B69E2AD6C71000610220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C611B69F2AD6C71400610220 /* FResponse */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C611B69F2AD6C71400610220 /* FResponse */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6A02AD6C71E00610220 /* FResponse.swift */,
+				C611B6A22AD6C72700610220 /* FResponseExtensions.swift */,
+			);
+			path = FResponse;
+			sourceTree = "<group>";
+		};
+		C611B6AA2AD6C7BD00610220 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6AB2AD6C7D000610220 /* Base */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		C611B6AB2AD6C7D000610220 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6AC2AD6C7DC00610220 /* DecodableParser.swift */,
+				C611B6AE2AD6C7E400610220 /* BaseParser.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C611B6B22AD6D46A00610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B32AD6D48700610220 /* LeagueService.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6B52AD6D4D600610220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6C12AD6D84D00610220 /* League */,
+				C611B6C22AD6D85700610220 /* Team */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C611B6B82AD6D5BF00610220 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B92AD6D5C300610220 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C611B6B92AD6D5C300610220 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6BA2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift */,
+				C611B6F72AD6EA1600610220 /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C611B6BE2AD6D80A00610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6BF2AD6D81200610220 /* TeamService.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		C611B6C12AD6D84D00610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6B62AD6D4E400610220 /* NetworkLeague.swift */,
+				C611B6BC2AD6D66B00610220 /* NetworkLeagueResponse.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6C22AD6D85700610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6C32AD6D86B00610220 /* NetworkTeamResponse.swift */,
+				C611B6C52AD6D87200610220 /* NetworkTeam.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		C611B6C72AD6DAF800610220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E72AD6E3E600610220 /* Team */,
+				C611B6C92AD6DB5300610220 /* League */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C611B6C82AD6DAFE00610220 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E02AD6E18F00610220 /* DI */,
+				C611B6CF2AD6DCA900610220 /* League */,
+				C611B6EC2AD6E51C00610220 /* Team */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C611B6C92AD6DB5300610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6CA2AD6DB6100610220 /* League.swift */,
+				C611B6CC2AD6DB8F00610220 /* LeagueResponse.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6CF2AD6DCA900610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6D02AD6DCB400610220 /* LeagueRepository.swift */,
+				C611B6D22AD6DCBB00610220 /* LeagueRepositoryImpl.swift */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6D42AD6DD5800610220 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E42AD6E21D00610220 /* RepositoryPublisher */,
+				C611B6D52AD6DD6400610220 /* Resource */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C611B6D52AD6DD6400610220 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6F42AD6E82300610220 /* Extensions */,
+				C611B6D62AD6DD6D00610220 /* FResource.swift */,
+				C611B6DA2AD6DD9F00610220 /* ResourceEmpty.swift */,
+				C611B6D82AD6DD9500610220 /* ResourceLoading.swift */,
+				C611B6DC2AD6DDB400610220 /* ResourceError.swift */,
+				C611B6DE2AD6DDC200610220 /* ResourceSuccess.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C611B6E02AD6E18F00610220 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E12AD6E19F00610220 /* RepositoryModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		C611B6E42AD6E21D00610220 /* RepositoryPublisher */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E52AD6E23D00610220 /* RepositoryPublisher.swift */,
+			);
+			path = RepositoryPublisher;
+			sourceTree = "<group>";
+		};
+		C611B6E72AD6E3E600610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6E82AD6E3EE00610220 /* Team.swift */,
+				C611B6EA2AD6E3F400610220 /* TeamResponse.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		C611B6EC2AD6E51C00610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6ED2AD6E52C00610220 /* TeamRepository.swift */,
+				C611B6EF2AD6E53600610220 /* TeamRepositoryImpl.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		C611B6F12AD6E69A00610220 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6602AD6A33E00610220 /* LeagueScreen.swift */,
+				C611B6F22AD6E6EC00610220 /* LeagueViewModel.swift */,
+				C611B7052AD6F87200610220 /* Team */,
+			);
+			path = League;
+			sourceTree = "<group>";
+		};
+		C611B6F42AD6E82300610220 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6F52AD6E83300610220 /* FResourceExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C611B6F92AD6EAB500610220 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C611B6FA2AD6EACF00610220 /* ViewModelModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		C611B7022AD6F5A400610220 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C611B7032AD6F5AF00610220 /* FImage.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C611B7052AD6F87200610220 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				C611B7002AD6F19A00610220 /* TeamViewModel.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +528,11 @@
 			dependencies = (
 			);
 			name = FDJ;
+			packageProductDependencies = (
+				C611B6922AD6A84100610220 /* Alamofire */,
+				C611B6952AD6A85100610220 /* Factory */,
+				C611B6FD2AD6F16800610220 /* Kingfisher */,
+			);
 			productName = FDJ;
 			productReference = C611B65B2AD6A33E00610220 /* FDJ.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +605,11 @@
 				Base,
 			);
 			mainGroup = C611B6522AD6A33E00610220;
+			packageReferences = (
+				C611B6912AD6A84100610220 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C611B6942AD6A85100610220 /* XCRemoteSwiftPackageReference "Factory" */,
+				C611B6FC2AD6F16800610220 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C611B65C2AD6A33E00610220 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +652,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C611B6612AD6A33E00610220 /* ContentView.swift in Sources */,
+				C611B6D32AD6DCBB00610220 /* LeagueRepositoryImpl.swift in Sources */,
+				C611B6AD2AD6C7DC00610220 /* DecodableParser.swift in Sources */,
+				C611B6E92AD6E3EE00610220 /* Team.swift in Sources */,
+				C611B6CD2AD6DB8F00610220 /* LeagueResponse.swift in Sources */,
+				C611B6FB2AD6EACF00610220 /* ViewModelModule.swift in Sources */,
+				C611B6C42AD6D86B00610220 /* NetworkTeamResponse.swift in Sources */,
+				C611B6F32AD6E6EC00610220 /* LeagueViewModel.swift in Sources */,
+				C611B7012AD6F19A00610220 /* TeamViewModel.swift in Sources */,
+				C611B6612AD6A33E00610220 /* LeagueScreen.swift in Sources */,
+				C611B6B42AD6D48700610220 /* LeagueService.swift in Sources */,
+				C611B6D72AD6DD6D00610220 /* FResource.swift in Sources */,
+				C611B6DB2AD6DD9F00610220 /* ResourceEmpty.swift in Sources */,
+				C611B6DF2AD6DDC200610220 /* ResourceSuccess.swift in Sources */,
+				C611B6BB2AD6D5D600610220 /* KeyedDecodingContainerExtensions.swift in Sources */,
+				C611B6EB2AD6E3F400610220 /* TeamResponse.swift in Sources */,
+				C611B6D12AD6DCB400610220 /* LeagueRepository.swift in Sources */,
+				C611B6F62AD6E83300610220 /* FResourceExtensions.swift in Sources */,
+				C611B6C02AD6D81200610220 /* TeamService.swift in Sources */,
+				C611B6B72AD6D4E400610220 /* NetworkLeague.swift in Sources */,
+				C611B6C62AD6D87200610220 /* NetworkTeam.swift in Sources */,
+				C611B6A12AD6C71E00610220 /* FResponse.swift in Sources */,
+				C611B6F02AD6E53600610220 /* TeamRepositoryImpl.swift in Sources */,
+				C611B6E22AD6E19F00610220 /* RepositoryModule.swift in Sources */,
+				C611B6DD2AD6DDB400610220 /* ResourceError.swift in Sources */,
+				C611B6BD2AD6D66B00610220 /* NetworkLeagueResponse.swift in Sources */,
+				C611B6D92AD6DD9500610220 /* ResourceLoading.swift in Sources */,
+				C611B6F82AD6EA1600610220 /* StringExtensions.swift in Sources */,
+				C611B6A32AD6C72700610220 /* FResponseExtensions.swift in Sources */,
+				C611B6AF2AD6C7E400610220 /* BaseParser.swift in Sources */,
 				C611B65F2AD6A33E00610220 /* FDJApp.swift in Sources */,
+				C611B6CB2AD6DB6100610220 /* League.swift in Sources */,
+				C611B7042AD6F5AF00610220 /* FImage.swift in Sources */,
+				C611B6B12AD6CC8300610220 /* BaseService.swift in Sources */,
+				C611B6EE2AD6E52C00610220 /* TeamRepository.swift in Sources */,
+				C611B6E62AD6E23D00610220 /* RepositoryPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +1005,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C611B6912AD6A84100610220 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C611B6942AD6A85100610220 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		C611B6FC2AD6F16800610220 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C611B6922AD6A84100610220 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C611B6912AD6A84100610220 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C611B6952AD6A85100610220 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C611B6942AD6A85100610220 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		C611B6FD2AD6F16800610220 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C611B6FC2AD6F16800610220 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C611B6532AD6A33E00610220 /* Project object */;
 }
